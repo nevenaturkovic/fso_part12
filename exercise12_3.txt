@@ -1,78 +1,0 @@
-Script started on 2023-01-18 14:51:00+01:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="91" LINES="29"]
-]1;...applications]2;nevena@nevena-xps13: ~/Desktop/fullstackopen/part12/container-applications]0;~/Desktop/fullstackopen/part12/container-applications
-[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications[39m
-[35m❯[39m [K[?1h=[?2004h[A[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications[39m [38;5;242mmain[38;5;218m[39m
-[35m❯[39m [Kd[33md[33mo[39m[90mcker container stop hardcore_mcnulty[39m[36D[1m[31md[1m[31mo[1m[31mc[0m[39m[1m[31mc[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32md[0m[32mo[0m[32mc[0m[32mk[0m[32me[32mr[39m[39m [33mr[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [30D[33mr[33mu[39m[33mu[33mn[39m [36m-[39m[36m-[36mi[39m[36mi[36mt[39m hardcore_mcnulty[?1l>[?2004l
-]1;docker]2;nevena@nevena-xps13: docker]0;container-applications: docker run -it hardcore_mcnultyEmulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.
-Error: short-name "hardcore_mcnulty" did not resolve to an alias and no unqualified-search registries are defined in "/etc/containers/registries.conf"
-]1;...applications]2;nevena@nevena-xps13: ~/Desktop/fullstackopen/part12/container-applications]0;~/Desktop/fullstackopen/part12/container-applications
-[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications[39m [38;5;242mmain[38;5;218m[39m
-[31m❯[39m [K[?1h=[?2004h[A[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications[39m [38;5;242mmain[38;5;218m*[39m
-[31m❯[39m [K[32mdocker[39m [33mrun[39m [36m-it[39m hardcore_mcnulty[31D[32ms[32mc[32mr[32mi[32mp[32mt[39m [35me[35mx[35me[35mr[35mc[35mi[35ms[35me[35m1[35m2[35m_[35m3[35m.[35mt[35mx[35mt[39m        [8D[23D[32me[32mx[32mi[32mt[39m[39m [39m  [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [19D[32md[32mo[32mc[32mk[32mer[39m [33mcontainer[39m stop hardcore_mcnulty[19Dart [36m-[36mi[39m hardcore_mcnulty [90my[39m [39m [90mty[39m [39m [39m [90mlty[39m [39m [39m [39m [90multy[39m [39m [39m [39m [39m [90mnulty[39m [39m [39m [39m [39m [39m [90mcnulty[39m [39m [39m [39m [39m [39m [39m [90mmcnulty[39m [39m [39m [39m [39m [39m [39m [39m [8D[90m_mcnulty[39m[8D [39m [39m [39m [39m [39m [39m [39m [39m [9D[90me_mcnulty[39m[9D [39m [39m [39m [39m [39m [39m [39m [39m [39m [10D[90mre_mcnulty[39m[10D [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [11D[90more_mcnulty[39m[11D [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [12D[90mcore_mcnulty[39m[12D [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [13D[90mdcore_mcnulty[39m[13D [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [14D[90mrdcore_mcnulty[39m[14D [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [15D[90mardcore_mcnulty[39m[15D [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [16D[90mhardcore_mcnulty[39m[16D[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [17D[90m hardcore_mcnulty[39m[17D[36m-[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [18D[90mi hardcore_mcnulty[39m[18D[36m-[36m-[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [17D[36m-[36mh[39m[36mh[36me[39m[36me[36ml[39m[36ml[36mp[39m[?1l>[?2004l
-]1;docker]2;nevena@nevena-xps13: docker]0;container-applications: docker container start --helpEmulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.
-Start one or more containers
-
-Description:
-  Starts one or more containers.  The container name or ID can be used.
-
-Usage:
-  podman container start [options] CONTAINER [CONTAINER...]
-
-Examples:
-  podman container start --latest
-  podman container start 860a4b231279 5421ab43b45
-  podman container start --interactive --attach imageID
-
-Options:
-      --all                 Start all containers regardless of their state or configuration
-  -a, --attach              Attach container's STDOUT and STDERR
-      --detach-keys [a-Z]   Select the key sequence for detaching a container. Format is a single character [a-Z] or a comma separated sequence of `ctrl-<value>`, where `<value>` is one of: `a-z`, `@`, `^`, `[`, `\`, `]`, `^` or `_` (default "ctrl-p,ctrl-q")
-  -f, --filter strings      Filter output based on conditions given
-  -i, --interactive         Keep STDIN open even if not attached
-  -l, --latest              Act on the latest container podman is aware of
-                            Not supported with the "--remote" flag
-      --sig-proxy           Proxy received signals to the process (default true if attaching, false otherwise)
-
-]1;...applications]2;nevena@nevena-xps13: ~/Desktop/fullstackopen/part12/container-applications]0;~/Desktop/fullstackopen/part12/container-applications
-[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications[39m [38;5;242mmain[38;5;218m*[39m
-[35m❯[39m [K[?1h=[?2004h[32mdocker[39m [33mcontainer[39m start [36m--help[39m[?1l>[?2004l
-]1;docker]2;nevena@nevena-xps13: docker]0;container-applications: docker container start --helpEmulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.
-Start one or more containers
-
-Description:
-  Starts one or more containers.  The container name or ID can be used.
-
-Usage:
-  podman container start [options] CONTAINER [CONTAINER...]
-
-Examples:
-  podman container start --latest
-  podman container start 860a4b231279 5421ab43b45
-  podman container start --interactive --attach imageID
-
-Options:
-      --all                 Start all containers regardless of their state or configuration
-  -a, --attach              Attach container's STDOUT and STDERR
-      --detach-keys [a-Z]   Select the key sequence for detaching a container. Format is a single character [a-Z] or a comma separated sequence of `ctrl-<value>`, where `<value>` is one of: `a-z`, `@`, `^`, `[`, `\`, `]`, `^` or `_` (default "ctrl-p,ctrl-q")
-  -f, --filter strings      Filter output based on conditions given
-  -i, --interactive         Keep STDIN open even if not attached
-  -l, --latest              Act on the latest container podman is aware of
-                            Not supported with the "--remote" flag
-      --sig-proxy           Proxy received signals to the process (default true if attaching, false otherwise)
-
-]1;...applications]2;nevena@nevena-xps13: ~/Desktop/fullstackopen/part12/container-applications]0;~/Desktop/fullstackopen/part12/container-applications
-[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications[39m [38;5;242mmain[38;5;218m*[39m
-[35m❯[39m [K[?1h=[?2004h[32mdocker[39m [33mcontainer[39m start [36m--help[39m[22D[33mr[33mu[33mn[39m[39m [36m-[36mi[36mt[39m[39m [39mhardcore[39m_[39mm[39mc[39mn[39mu[39mlty[31D[32ms[32mc[32mr[32mi[32mp[32mt[39m [35me[35mx[35me[35mr[35mc[35mi[35ms[35me[35m1[35m2[35m_[35m3[35m.[35mt[35mx[35mt[39m        [8D[23D[32md[32mo[32mc[32mk[32me[32mr[39m [33mr[33mu[33mn[39m[39m [36m-[36mi[36mt[39m[39m [39mh[39ma[39mr[39md[39mc[39mo[39mr[39me_mcnulty[31D[32ms[32mc[32mr[32mi[32mp[32mt[39m [35me[35mx[35me[35mr[35mc[35mi[35ms[35me[35m1[35m2[35m_[35m3[35m.[35mt[35mx[35mt[39m        [8D[23D[32me[32mx[32mi[32mt[39m[39m [39m  [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [19D[32md[32mo[32mc[32mk[32mer[39m [33mcontainer[39m stop hardcore_mcnulty[19Dart [36m-[36mi[39m hardcore_mcnulty[42D[32mh[32mt[32mo[32mp[39m[39m [39m  [39m [39m [39m [39m [39m [39m [39m [39m [39m        [39m [39m                  [38D[32md[32mo[32mc[32mk[32mer[39m [33mcontainer[39m stop[21D[32mh[32mt[32mo[32mp[39m[39m [39m  [39m [39m [39m [39m [39m [39m [39m [39m [39m      [17D[32md[32mo[32mc[32mk[32mer[39m [33mcontainer[39m start [36m-i[39m hardcore_mcnulty[23Dop[4P[17C    [?1l>[?2004l
-]1;docker]2;nevena@nevena-xps13: docker]0;container-applications: docker container stop hardcore_mcnultyEmulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.
-hardcore_mcnulty
-]1;...applications]2;nevena@nevena-xps13: ~/Desktop/fullstackopen/part12/container-applications]0;~/Desktop/fullstackopen/part12/container-applications
-[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications[39m [38;5;242mmain[38;5;218m*[39m
-[35m❯[39m [K[?1h=[?2004h[32mdocker[39m [33mcontainer[39m stop hardcore_mcnulty[19Dart [36m-[36m-[36mh[36me[36ml[36mp[39m         [9D[22D[33mr[33mu[33mn[39m[39m [36m-[36mi[36mt[39m[39m [39mhardcore[39m_[39mm[39mc[39mn[39mu[39mlty[31D[32ms[32mc[32mr[32mi[32mp[32mt[39m [35me[35mx[35me[35mr[35mc[35mi[35ms[35me[35m1[35m2[35m_[35m3[35m.[35mt[35mx[35mt[39m        [8D[23D[32me[32mx[32mi[32mt[39m[39m [39m  [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [19D[32md[32mo[32mc[32mk[32mer[39m [33mcontainer[39m start [36m-i[39m hardcore_mcnulty[42D[32mh[32mt[32mo[32mp[39m[39m [39m  [39m [39m [39m [39m [39m [39m [39m [39m [39m        [39m [39m                  [38D[32md[32mo[32mc[32mk[32mer[39m [33mcontainer[39m start [36m-i[39m hardcore_mcnulty[36ma[36mi[39m hardcore_mcnulty[18D[?1l>[?2004l
-]1;docker]2;nevena@nevena-xps13: docker]0;container-applications: docker container start -ai hardcore_mcnultyEmulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.
-[?2004h]0;root@2c1f1bf846a8: /root@2c1f1bf846a8:/# [?2004l
-exit
-]1;...applications]2;nevena@nevena-xps13: ~/Desktop/fullstackopen/part12/container-applications]0;~/Desktop/fullstackopen/part12/container-applications
-[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications[39m [38;5;242mmain[38;5;218m*[39m [33m1m 13s[39m
-[35m❯[39m [K[?1h=[?2004h[?2004l
-
-Script done on 2023-01-18 14:53:59+01:00 [COMMAND_EXIT_CODE="0"]
