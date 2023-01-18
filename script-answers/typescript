@@ -1,0 +1,12 @@
+Script started on 2023-01-17 13:46:21+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="177" LINES="38"]
+]1;...ript-answers]2;nevena@nevena-xps13: ~/Desktop/fullstackopen/part12/container-applications/script-answers]0;~/Desktop/fullstackopen/part12/container-applications/script-answers
+[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications/script-answers[39m
+[35m❯[39m [K[?1h=[?2004h[A[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications/script-answers[39m [38;5;242mmain[38;5;218m[39m
+[35m❯[39m [K[A[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications/script-answers[39m [38;5;242mmain[38;5;218m*[39m
+[35m❯[39m [K[32mecho[39m [33m"hello"[39m[8D[7m [6C[27m[33m"[27m[39m[8D[27m [6C[33m"[39m[?1l>[?2004l
+]1;echo]2;nevena@nevena-xps13: echo]0;script-answers: echo "hello"hello
+]1;...ript-answers]2;nevena@nevena-xps13: ~/Desktop/fullstackopen/part12/container-applications/script-answers]0;~/Desktop/fullstackopen/part12/container-applications/script-answers
+[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications/script-answers[39m [38;5;242mmain[38;5;218m*[39m
+[35m❯[39m [K[?1h=[?2004h[32me[39m[32me[39m[90mcho "hello"[39m[11D[1m[31me[1m[31mx[0m[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [10D[90mport NODE_OPTIONS=--openssl-legacy-provider[39m[43D[1m[31me[1m[31mx[1m[31mi[0m[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [42D[0m[32me[0m[32mx[0m[32mi[32mt[39m[?1l>[?2004l
+]1;exit]2;nevena@nevena-xps13: exit]0;script-answers: exit
+Script done on 2023-01-17 13:46:53+01:00 [COMMAND_EXIT_CODE="0"]
