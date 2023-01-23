@@ -344,4 +344,69 @@ switched to db the_database
 [0m[34m ⠿ Container todo-backend-mongo-1  Running                                                                                                                                                                                      0.0s
 [0m[?25h]1;...todo-backend]2;nevena@nevena-xps13: ~/Desktop/fullstackopen/part12/container-applications/todo-app/todo-backend]0;~/Desktop/fullstackopen/part12/container-applications/todo-app/todo-backend
 [0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications/todo-app/todo-backend[39m [38;5;242mmain[38;5;218m*[39m
-[35m❯[39m [K[?1h=[?2004hREDIS_URL=insert-redis-url-here MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database [32mnpm[39m [33mrun[39m dev[117D[7mR[7mE[7mD[7mI[7mS[7m_[7mU[7mR[7mL[7m=[7mi[7mn[7ms[7me[7mr[7mt[7m-[7mr[7me[7md[7mi[7ms[7m-[7mu[7mr[7ml[7m-[7mh[7me[7mr[7me[7m [7mM[7mO[7mN[7mG[7mO[7m_[7mU[7mR[7mL[7m=[7mm[7mo[7mn[7mg[7mo[7md[7mb[7m:[7m/[7m/[7mt[7mh[7me[7m_[7mu[7ms[7me[7mr[7mn[7ma[7mm[7me[7m:[7mt[7mh[7me[7m_[7mp[7ma[7ms[7ms[7mw[7mo[7mr[7md[7m@[7ml[7mo[7mc[7ma[7ml[7mh[7mo[7ms[7mt[7m:[7m3[7m4[7m5[7m6[7m/[7mt[7mh[7me[7m_[7md[7ma[7mt[7ma[7mb[7ma[7ms[7me[7m [3C[7m [3C[7m [7md[7me[7mv[27m[117D[27mR[27mE[27mD[27mI[27mS[27m_[27mU[27mR[27mL[27m=[27mi[27mn[27ms[27me[27mr[27mt[27m-[27mr[27me[27md[27mi[27ms[27m-[27mu[27mr[27ml[27m-[27mh[27me[27mr[27me[27m [27mM[27mO[27mN[27mG[27mO[27m_[27mU[27mR[27mL[27m=[27mm[27mo[27mn[27mg[27mo[27md[27mb[27m:[27m/[27m/[27mt[27mh[27me[27m_[27mu[27ms[27me[27mr[27mn[27ma[27mm[27me[27m:[27mt[27mh[27me[27m_[27mp[27ma[27ms[27ms[27mw[27mo[27mr[27md[27m@[27ml[27mo[27mc[27ma[27ml[27mh[27mo[27ms[27mt[27m:[27m3[27m4[27m5[27m6[27m/[27mt[27mh[27me[27m_[27md[27ma[27mt[27ma[27mb[27ma[27ms[27me[27m [3C[27m [3C[27m [27md[27me[27mv[1C[1C[1C[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87Dredis://host:port MONGO_URL=mongodb://the_username:the_password@localhost:3[39m4[39m5[39m6/[39mt[39mh[39me_database [32mnpm[39m [33mrun[39m dev[86D[17D[7mr[7me[7md[7mi[7ms[7m:[7m/[7m/[7mh[7mo[7ms[7mt[7m:[7mp[7mo[7mr[7mt[27m[17D[27mr[27me[27md[27mi[27ms[27m:[27m/[27m/[27mh[27mo[27ms[27mt[27m:[27mp[27mo[27mr[27mt[1C[1C[1C[1C[1C[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D6 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database[39m [32mn[32mp[32mm[39m[39m [33mr[33mu[33mn[39m dev[86D3 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database[39m [32mn[32mp[32mm[39m[39m [33mr[33mu[33mn[39m dev[86D7 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database[39m [32mn[32mp[32mm[39m[39m [33mr[33mu[33mn[39m dev[86D9 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database[39m [32mn[32mp[32mm[39m[39m [33mr[33mu[33mn[39m dev[86Dlhost:6379 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database[39m [32mn[32mp[32mm[39m[39m [33mr[33mu[33mn[39m dev[95Dohost:6379 MONGO_URL=mongodb://the_username:the_password@localhost:3456
+[35m❯[39m [K[?1h=[?2004hREDIS_URL=insert-redis-url-here MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database [32mnpm[39m [33mrun[39m dev[117D[7mR[7mE[7mD[7mI[7mS[7m_[7mU[7mR[7mL[7m=[7mi[7mn[7ms[7me[7mr[7mt[7m-[7mr[7me[7md[7mi[7ms[7m-[7mu[7mr[7ml[7m-[7mh[7me[7mr[7me[7m [7mM[7mO[7mN[7mG[7mO[7m_[7mU[7mR[7mL[7m=[7mm[7mo[7mn[7mg[7mo[7md[7mb[7m:[7m/[7m/[7mt[7mh[7me[7m_[7mu[7ms[7me[7mr[7mn[7ma[7mm[7me[7m:[7mt[7mh[7me[7m_[7mp[7ma[7ms[7ms[7mw[7mo[7mr[7md[7m@[7ml[7mo[7mc[7ma[7ml[7mh[7mo[7ms[7mt[7m:[7m3[7m4[7m5[7m6[7m/[7mt[7mh[7me[7m_[7md[7ma[7mt[7ma[7mb[7ma[7ms[7me[7m [3C[7m [3C[7m [7md[7me[7mv[27m[117D[27mR[27mE[27mD[27mI[27mS[27m_[27mU[27mR[27mL[27m=[27mi[27mn[27ms[27me[27mr[27mt[27m-[27mr[27me[27md[27mi[27ms[27m-[27mu[27mr[27ml[27m-[27mh[27me[27mr[27me[27m [27mM[27mO[27mN[27mG[27mO[27m_[27mU[27mR[27mL[27m=[27mm[27mo[27mn[27mg[27mo[27md[27mb[27m:[27m/[27m/[27mt[27mh[27me[27m_[27mu[27ms[27me[27mr[27mn[27ma[27mm[27me[27m:[27mt[27mh[27me[27m_[27mp[27ma[27ms[27ms[27mw[27mo[27mr[27md[27m@[27ml[27mo[27mc[27ma[27ml[27mh[27mo[27ms[27mt[27m:[27m3[27m4[27m5[27m6[27m/[27mt[27mh[27me[27m_[27md[27ma[27mt[27ma[27mb[27ma[27ms[27me[27m [3C[27m [3C[27m [27md[27me[27mv[1C[1C[1C[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87Dredis://host:port MONGO_URL=mongodb://the_username:the_password@localhost:3[39m4[39m5[39m6/[39mt[39mh[39me_database [32mnpm[39m [33mrun[39m dev[86D[17D[7mr[7me[7md[7mi[7ms[7m:[7m/[7m/[7mh[7mo[7ms[7mt[7m:[7mp[7mo[7mr[7mt[27m[17D[27mr[27me[27md[27mi[27ms[27m:[27m/[27m/[27mh[27mo[27ms[27mt[27m:[27mp[27mo[27mr[27mt[1C[1C[1C[1C[1C[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D6 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database[39m [32mn[32mp[32mm[39m[39m [33mr[33mu[33mn[39m dev[86D3 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database[39m [32mn[32mp[32mm[39m[39m [33mr[33mu[33mn[39m dev[86D7 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database[39m [32mn[32mp[32mm[39m[39m [33mr[33mu[33mn[39m dev[86D9 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database[39m [32mn[32mp[32mm[39m[39m [33mr[33mu[33mn[39m dev[86Dlhost:6379 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database[39m [32mn[32mp[32mm[39m[39m [33mr[33mu[33mn[39m dev[95Dohost:6379 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database[39m [32mn[32mp[32mm[39m[39m [33mr[33mu[33mn[39m dev[95Dchost:6379 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database[39m [32mn[32mp[32mm[39m[39m [33mr[33mu[33mn[39m dev[95Dahost:6379 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database[39m [32mn[32mp[32mm[39m[39m [33mr[33mu[33mn[39m dev[95Dlhost:6379 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database[39m [32mn[32mp[32mm[39m[39m [33mr[33mu[33mn[39m dev[95D[1C[1C[1C[?1l>[?2004l
+]1;npm]2;nevena@nevena-xps13: npm]0;todo-backend: REDIS_URL=redis://localhost:6379 MONGO_URL= npm run dev
+> todo-express-backend@0.0.0 dev
+> nodemon ./bin/www
+
+[33m[nodemon] 2.0.12[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node ./bin/www`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./bin/www`[39m
+^C
+]1;...todo-backend]2;nevena@nevena-xps13: ~/Desktop/fullstackopen/part12/container-applications/todo-app/todo-backend]0;~/Desktop/fullstackopen/part12/container-applications/todo-app/todo-backend
+[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications/todo-app/todo-backend[39m [38;5;242mmain[38;5;218m*[39m [33m7m 17s[39m
+[31m❯[39m [K[?1h=[?2004hREDIS_URL=redis://localhost:6379 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database [32mnpm[39m [33mrun[39m dev[?1l>[?2004l
+]1;npm]2;nevena@nevena-xps13: npm]0;todo-backend: REDIS_URL=redis://localhost:6379 MONGO_URL= npm run dev
+> todo-express-backend@0.0.0 dev
+> nodemon ./bin/www
+
+[33m[nodemon] 2.0.12[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node ./bin/www`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./bin/www`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./bin/www`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./bin/www`[39m
+/home/nevena/Desktop/fullstackopen/part12/container-applications/todo-app/todo-backend/routes/todos.js:18
+  const count = await getAsync("todoCount")
+                ^
+
+ReferenceError: getAsync is not defined
+    at [90m/home/nevena/Desktop/fullstackopen/part12/container-applications/todo-app/todo-backend/[39mroutes/todos.js:18:17
+[90m    at processTicksAndRejections (node:internal/process/task_queues:96:5)[39m
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./bin/www`[39m
+[0mPOST /todos/ [32m200 [0m39.310 ms - 73[0m
+[0mPOST /todos/ [32m200 [0m12.975 ms - 73[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./bin/www`[39m
+[0mGET /statistics [32m200 [0m5.902 ms - 20[0m
+[0mPOST /todos/ [32m200 [0m30.818 ms - 73[0m
+[0mGET /statistics [32m200 [0m0.972 ms - 21[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./bin/www`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./bin/www`[39m
+first [1mnull[22m
+[0mGET /statistics [36m304 [0m7.893 ms - -[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./bin/www`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./bin/www`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./bin/www`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./bin/www`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./bin/www`[39m
+[0mGET /statistics [32m200 [0m6.115 ms - 19[0m
+[0mPOST /todos/ [32m200 [0m34.106 ms - 7
