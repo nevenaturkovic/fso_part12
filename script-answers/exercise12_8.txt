@@ -47,4 +47,301 @@ For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
    Enable MongoDB's free cloud-based monitoring service, which will then receive and display
    metrics about your deployment (disk utilization, CPU, operation statistics, etc).
    
-   The 
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+   
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow dbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m         72.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   56.00 KiB
+[1G[0Jtest> [7Guse the_database
+switched to db the_database
+[1G[0Jthe_database> [15Gshow collections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gdb.todos.find({})
+[
+  {
+    _id: ObjectId("63caa71ae8867c387896ff46"),
+    text: [32m'Write NEWg code'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId("63caa71ae8867c387896ff47"),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gdb.todos.insertOne({text[33mtext[39m:[32m"[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m[32ms[39m[32me[39m [32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mm[39m[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32ms[39m [32mi[39m[32mn[39m [32mm[39m[32my[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32mb[39m[32me[39m[32ml[39m[32mt[39m[32m"[39m, d[36mdo[39mdonw[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m:[32m"Increase the number of tools in my toolbelt"[39m, don[90Ge[33mdone[39m: fals[33mfalse[39m})
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId("63ce78a592d06f6ff239d8ba")
+}
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m:[32m"Increase the number of tools in my toolbelt"[39m, [33mdone[39m: [33mfalse[39m})[100G[1G[0Jthe_database> db.todos.find({})[32G
+[
+  {
+    _id: ObjectId("63caa71ae8867c387896ff46"),
+    text: [32m'Write NEWg code'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId("63caa71ae8867c387896ff47"),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId("63ce78a592d06f6ff239d8ba"),
+    text: [32m'Increase the number of tools in my toolbelt'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15G[1G[0Jthe_database> [15G
+]1;...ript-answers]2;nevena@nevena-xps13: ~/Desktop/fullstackopen/part12/container-applications/script-answers]0;~/Desktop/fullstackopen/part12/container-applications/script-answers
+[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications/script-answers[39m [38;5;242mmain[38;5;218m*[39m [33m1h 12m 3s[39m
+[35m❯[39m [K[?1h=[?2004h[A[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications/script-answers[39m [38;5;242mmain[38;5;218m[39m [33m1h 12m 3s[39m
+[35m❯[39m [K[A[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications/script-answers[39m [38;5;242mmain[38;5;218m[39m [33m1h 12m 3s[39m
+[35m❯[39m [32md[39m[32md[39m[90mocker exec -it todo-backend-mongo-1 mongosh -u root -p example[39m[62D[33md[33mo[39m[1m[31md[1m[31mo[1m[31mc[0m[39m[1m[31mc[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32md[0m[32mo[0m[32mc[0m[32mk[0m[32me[32mr[39m[39m [33mc[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [55D[90montainer rm jovial_knuth[39m[24D[33mc[33mo[39m[33mo[33mm[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [22D[90mmit hardcore_mcnulty helo-node-world[39m[36D[33mm[33mp[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [35D[33mp[33mo[39m[33mp[39m[39m [33mm[39m[39m [90mmit hardcore_mcnulty helo-node-world[39m[36D[33mo[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [37D[90mntainer rm jovial_knuth[39m[23D[33mc[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [24D[90montainer rm jovial_knuth[39m[24D[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [25D[90mexec -it todo-backend-mongo-1 mongosh -u root -p example[39m[56D[36m-[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [55D[90mv[39m[36m-[36mc[39m[36mc[36mo[39m[36mo[36mm[39m[36mo[39m[39m [36mc[39m[39m [36m-[39m[39m [90mv[39m[39m [39m [90mexec -it todo-backend-mongo-1 mongosh -u root -p example[39m[56D[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [57D[90m exec -it todo-backend-mongo-1 mongosh -u root -p example[39m[57D[1m[31md[1m[31mo[1m[31mc[1m[31mk[1m[31me[1m[31mr[1m[31m-[0m[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [56D[90mcompose -f docker-compose.dev.yml up -d[39m[39D[1m[31m-[1m[31mc[0m[39m[1m[31mc[1m[31mo[0m[39m[33m[39m[9D[0m[32md[0m[32mo[0m[32mc[0m[32mk[0m[32me[0m[32mr[0m[32m-[0m[32mc[0m[32mo[32mm[32mp[32mo[32ms[32me[39m[39m[1m [0m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [31D[90m-f docker-compose.dev.yml up -d[39m[31D[0m [36m-[36mf[39m[39m [39md[39mo[39mc[39mk[39me[39mr[39m-[39mc[39mo[39mm[39mp[39mo[39ms[39me[39m.[39md[39me[39mv[39m.[39my[39mm[39ml[39m [39mu[39mp[39m [36m-[36md[39m[?1l>[?2004l
+]1;docker-compose]2;nevena@nevena-xps13: docker-compose]0;script-answers: docker-compose -f docker-compose.dev.yml up -dstat /home/nevena/Desktop/fullstackopen/part12/container-applications/script-answers/docker-compose.dev.yml: no such file or directory
+]1;...ript-answers]2;nevena@nevena-xps13: ~/Desktop/fullstackopen/part12/container-applications/script-answers]0;~/Desktop/fullstackopen/part12/container-applications/script-answers
+[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications/script-answers[39m [38;5;242mmain[38;5;218m[39m
+[31m❯[39m [K[?1h=[?2004h[A[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications/script-answers[39m [38;5;242mmain[38;5;218m*[39m
+[31m❯[39m [K[1m[31mc[0m[39m[0m[32mc[32md[39m[90m todo-app/todo-backend[39m[22D[39m [4m[35m.[24m[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [20D[90m.[39m[4m[35m.[4m[35m.[24m[39m[?1l>[?2004l
+]1;cd]2;nevena@nevena-xps13: cd]0;script-answers: cd ..]1;...applications]2;nevena@nevena-xps13: ~/Desktop/fullstackopen/part12/container-applications]0;~/Desktop/fullstackopen/part12/container-applications
+[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications[39m
+[35m❯[39m [K[?1h=[?2004h[A[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications[39m [38;5;242mmain[38;5;218m[39m
+[35m❯[39m [K[A[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications[39m [38;5;242mmain[38;5;218m*[39m
+[35m❯[39m [K[32ml[39m[32ml[39m[90ms[39m[32ml[32ms[39m[?1l>[?2004l
+]1;ls]2;nevena@nevena-xps13: ls]0;container-applications: ls -A --color[0m[01;34m.git[0m  [01;34mscript-answers[0m  [01;34mtodo-app[0m
+]1;...applications]2;nevena@nevena-xps13: ~/Desktop/fullstackopen/part12/container-applications]0;~/Desktop/fullstackopen/part12/container-applications
+[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications[39m [38;5;242mmain[38;5;218m*[39m
+[35m❯[39m [K[?1h=[?2004h[1m[31mc[0m[39m[1m[31mc[0m[39m[90md ..[39m[0m[32mc[32md[39m[39m [33m[39m[33m[39m[33m[39m[39m [39m [33m[39m
+ [33m-- local directory --[39m
+[J[01;34m.git[0m/            [J[01;34mscript-answers[0m/  [J[01;34mtodo-app[0m/      [J[A[A[0m[27m[24m[39m[2C[32mcd[39m[K[39m[1C[90m..[39m[33m[39m[33m[39m[33m[39m[39m.[39mgit[1m/[0m[33m[39m
+ [33m-- local directory --[39m[K[K
+[J[7m.git/          [0m  [J[01;34mscript-answers[0m/  [J[01;34mtodo-app[0m/      [J[A[A[0m[27m[24m[39m[2C[32mcd[39m .git[1m/[0m[K[39m
+[1B[7m.git/          [0m  [7m.git/          [0m  [A[A[0m[27m[24m[39m[2C[32mcd[39m .git[1m/[0m[K[39mscri[0mpt-answers[1m/[0m
+[1B[17C[7mscript-answers/[0m  [01;34m.git[0m/            [A[A[0m[27m[24m[39m[2C[32mcd[39m script-answers[1m/[0m[K[39m[15Dtodo-app[1m/[0m     [0m 
+[1B[34C[7mtodo-app/      [0m[17C[01;34mscript-answers[0m/  [A[A[0m[27m[24m[39m[2C[32mcd[39m todo-app[1m/[0m[K[39m
+[J[A[14C[9D[4m[35mt[4m[35mo[4m[35md[4m[35mo[4m[35m-[4m[35ma[4m[35mp[4m[35mp[1m[4m[35m/[0m[24m[39m[90mtodo-backend[39m[12D[9D[24m[39mt[24m[39mo[24m[39md[24m[39mo[24m[39m-[24m[39ma[24m[39mp[24m[39mp[0m[24m[39m/[39mb[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [11Da[33m[39m[11D[4m[35mt[4m[35mo[4m[35md[4m[35mo[4m[35m-[4m[35ma[4m[35mp[4m[35mp[4m[35m/[4m[35mt[4m[35mo[4m[35mdo-backend[1m[4m[35m/[0m[24m[39m[4m[35md[24m[39m[0m[24m[39m [?1l>[?2004l
+[J]1;cd]2;nevena@nevena-xps13: cd]0;container-applications: cd todo-app/todo-backend]1;...todo-backend]2;nevena@nevena-xps13: ~/Desktop/fullstackopen/part12/container-applications/todo-app/todo-backend]0;~/Desktop/fullstackopen/part12/container-applications/todo-app/todo-backend
+[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications/todo-app/todo-backend[39m [38;5;242mmain[38;5;218m*[39m
+[35m❯[39m [K[?1h=[?2004h[32mcd[39m todo-app/todo-backend[24D[32ml[32ms[39m                      [22D[32mc[32md[39m [4m[35m..[24m[39m[32md[32mo[32mc[24m[32mk[24m[32me[32mr-compose[39m [36m-f[39m [35mdocker-compose.dev.yml[39m up [36m-d[39m[?1l>[?2004l
+]1;docker-compose]2;nevena@nevena-xps13: docker-compose]0;todo-backend: docker-compose -f docker-compose.dev.yml up -d[1A[1B[0G[?25l[+] Running 0/0
+[37m ⠋ redis Pulling                                                                                                                                                                                                                0.1s
+[0m[?25h[1A[1A[0G[?25l[+] Running 0/1
+[37m ⠙ redis Pulling                                                                                                                                                                                                                0.2s
+[0m[?25h[1A[1A[0G[?25l[+] Running 0/1
+[37m ⠹ redis Pulling                                                                                                                                                                                                                0.3s
+[0m[?25h[1A[1A[0G[?25l[+] Running 0/1
+[37m ⠸ redis Pulling                                                                                                                                                                                                                0.4s
+[0m[?25h[1A[1A[0G[?25l[+] Running 0/1
+[37m ⠼ redis Pulling                                                                                                                                                                                                                0.5s
+[0m[?25h[1A[1A[0G[?25l[+] Running 0/1
+[37m ⠴ redis Pulling                                                                                                                                                                                                                0.6s
+[0m[?25h[1A[1A[0G[?25l[+] Running 0/1
+[37m ⠦ redis Pulling                                                                                                                                                                                                                0.7s
+[0m[?25h[1A[1A[0G[?25l[+] Running 0/1
+[37m ⠧ redis Pulling                                                                                                                                                                                                                0.8s
+[0m[?25h[1A[1A[0G[?25l[+] Running 0/1
+[37m ⠇ redis Pulling                                                                                                                                                                                                                0.9s
+[0m[?25h[1A[1A[0G[?25l[+] Running 0/1
+[37m ⠏ redis Pulling                                                                                                                                                                                                                1.0s
+[0m[?25h[1A[1A[0G[?25l[+] Running 0/1
+[37m ⠋ redis Pulling                                                                                                                                                                                                                1.1s
+[0m[?25h[1A[1A[0G[?25l[+] Running 0/1
+[37m ⠙ redis Pulling                                                                                                                                                                                                                1.2s
+[0m[?25h[1A[1A[0G[?25l[+] Running 0/1
+[37m ⠹ redis Pulling                                                                                                                                                                                                                1.3s
+[0m[?25h[1A[1A[0G[?25l[+] Running 0/1
+[37m ⠸ redis Pulling                                                                                                                                                                                                                1.4s
+[0m[?25h[1A[1A[0G[?25l[+] Running 0/1
+[37m ⠼ redis Pulling                                                                                                                                                                                                                1.5s
+[0m[?25h[1A[1A[0G[?25l[+] Running 0/1
+[37m ⠴ redis Pulling                                                                                                                                                                                                                1.6s
+[0m[?25h[1A[1A[0G[?25l[+] Running 0/1
+[37m ⠦ redis Pulling                                                                                                                                                                                                                1.7s
+[0m[?25h[1A[1A[0G[?25l[+] Running 0/1
+[37m ⠧ redis Pulling                                                                                                                                                                                                                1.8s
+[0m[?25h[1A[1A[0G[?25l[+] Running 0/1
+[37m ⠇ redis Pulling                                                                                                                                                                                                                1.9s
+[0m[?25h[1A[1A[0G[?25l[+] Running 0/1
+[37m ⠏ redis Pulling                                                                                                                                                                                                                2.0s
+[0m[?25h[1A[1A[0G[?25l[+] Running 0/1
+[37m ⠋ redis Pulling                                                                                                                                                                                                                2.1s
+[0m[?25h[1A[1A[0G[?25l[+] Running 0/1
+[37m ⠙ redis Pulling                                                                                                                                                                                                                2.2s
+[0m[?25h[1A[1A[0G[?25l[34m[+] Running 1/1[0m
+[37m ⠹ redis Pulling                                                                                                                                                                                                                2.3s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+[37m ⠸ redis Pulling                                                                                                                                                                                                                2.4s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+[37m ⠼ redis Pulling                                                                                                                                                                                                                2.5s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+[37m ⠴ redis Pulling                                                                                                                                                                                                                2.6s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+[37m ⠦ redis Pulling                                                                                                                                                                                                                2.7s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[37m   ⠋ 495af11a3eac Pulling fs layer                                                                                                                                                                                              0.0s
+[0m[37m   ⠋ a2271c958e57 Pulling fs layer                                                                                                                                                                                              0.0s
+[0m[37m   ⠋ f49c2d6d086c Pulling fs layer                                                                                                                                                                                              0.0s
+[0m[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/5
+[37m ⠧ redis Pulling                                                                                                                                                                                                                2.8s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[37m   ⠙ 495af11a3eac Pulling fs layer                                                                                                                                                                                              0.1s
+[0m[37m   ⠙ a2271c958e57 Pulling fs layer                                                                                                                                                                                              0.1s
+[0m[37m   ⠙ f49c2d6d086c Download complete                                                                                                                                                                                             0.1s
+[0m[37m   ⠋ 18b045ddb54d Pulling fs layer                                                                                                                                                                                              0.1s
+[0m[37m   ⠋ 14ed0c386119 Download complete                                                                                                                                                                                             0.1s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/7
+[37m ⠇ redis Pulling                                                                                                                                                                                                                2.9s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[37m   ⠹ 495af11a3eac Pulling fs layer                                                                                                                                                                                              0.2s
+[0m[37m   ⠹ a2271c958e57 Download complete                                                                                                                                                                                             0.2s
+[0m[37m   ⠹ f49c2d6d086c Download complete                                                                                                                                                                                             0.2s
+[0m[37m   ⠙ 18b045ddb54d Pulling fs layer                                                                                                                                                                                              0.2s
+[0m[37m   ⠙ 14ed0c386119 Download complete                                                                                                                                                                                             0.2s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/7
+[37m ⠏ redis Pulling                                                                                                                                                                                                                3.0s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[37m   ⠸ 495af11a3eac Pulling fs layer                                                                                                                                                                                              0.3s
+[0m[37m   ⠸ a2271c958e57 Download complete                                                                                                                                                                                             0.3s
+[0m[37m   ⠸ f49c2d6d086c Download complete                                                                                                                                                                                             0.3s
+[0m[37m   ⠹ 18b045ddb54d Pulling fs layer                                                                                                                                                                                              0.3s
+[0m[37m   ⠹ 14ed0c386119 Download complete                                                                                                                                                                                             0.3s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/7
+[37m ⠋ redis Pulling                                                                                                                                                                                                                3.1s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[37m   ⠼ 495af11a3eac Pulling fs layer                                                                                                                                                                                              0.4s
+[0m[37m   ⠼ a2271c958e57 Download complete                                                                                                                                                                                             0.4s
+[0m[37m   ⠼ f49c2d6d086c Download complete                                                                                                                                                                                             0.4s
+[0m[37m   ⠸ 18b045ddb54d Pulling fs layer                                                                                                                                                                                              0.4s
+[0m[37m   ⠸ 14ed0c386119 Download complete                                                                                                                                                                                             0.4s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/7
+[37m ⠙ redis Pulling                                                                                                                                                                                                                3.2s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[37m   ⠴ 495af11a3eac Download complete                                                                                                                                                                                             0.5s
+[0m[37m   ⠴ a2271c958e57 Download complete                                                                                                                                                                                             0.5s
+[0m[37m   ⠴ f49c2d6d086c Download complete                                                                                                                                                                                             0.5s
+[0m[37m   ⠼ 18b045ddb54d Pulling fs layer                                                                                                                                                                                              0.5s
+[0m[37m   ⠼ 14ed0c386119 Download complete                                                                                                                                                                                             0.5s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/7
+[37m ⠹ redis Pulling                                                                                                                                                                                                                3.3s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[37m   ⠦ 495af11a3eac Download complete                                                                                                                                                                                             0.6s
+[0m[37m   ⠦ a2271c958e57 Download complete                                                                                                                                                                                             0.6s
+[0m[37m   ⠦ f49c2d6d086c Download complete                                                                                                                                                                                             0.6s
+[0m[37m   ⠴ 18b045ddb54d Pulling fs layer                                                                                                                                                                                              0.6s
+[0m[37m   ⠴ 14ed0c386119 Download complete                                                                                                                                                                                             0.6s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/7
+[37m ⠸ redis Pulling                                                                                                                                                                                                                3.4s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[37m   ⠧ 495af11a3eac Download complete                                                                                                                                                                                             0.7s
+[0m[37m   ⠧ a2271c958e57 Download complete                                                                                                                                                                                             0.7s
+[0m[37m   ⠧ f49c2d6d086c Download complete                                                                                                                                                                                             0.7s
+[0m[37m   ⠦ 18b045ddb54d Pulling fs layer                                                                                                                                                                                              0.7s
+[0m[37m   ⠦ 14ed0c386119 Download complete                                                                                                                                                                                             0.7s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/7
+[37m ⠼ redis Pulling                                                                                                                                                                                                                3.5s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[37m   ⠇ 495af11a3eac Download complete                                                                                                                                                                                             0.8s
+[0m[37m   ⠇ a2271c958e57 Download complete                                                                                                                                                                                             0.8s
+[0m[37m   ⠇ f49c2d6d086c Download complete                                                                                                                                                                                             0.8s
+[0m[37m   ⠧ 18b045ddb54d Pulling fs layer                                                                                                                                                                                              0.8s
+[0m[37m   ⠧ 14ed0c386119 Download complete                                                                                                                                                                                             0.8s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/7
+[37m ⠴ redis Pulling                                                                                                                                                                                                                3.6s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[37m   ⠏ 495af11a3eac Download complete                                                                                                                                                                                             0.9s
+[0m[37m   ⠏ a2271c958e57 Download complete                                                                                                                                                                                             0.9s
+[0m[37m   ⠏ f49c2d6d086c Download complete                                                                                                                                                                                             0.9s
+[0m[37m   ⠇ 18b045ddb54d Pulling fs layer                                                                                                                                                                                              0.9s
+[0m[37m   ⠇ 14ed0c386119 Download complete                                                                                                                                                                                             0.9s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/7
+[37m ⠦ redis Pulling                                                                                                                                                                                                                3.7s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[37m   ⠋ 495af11a3eac Download complete                                                                                                                                                                                             1.0s
+[0m[37m   ⠋ a2271c958e57 Download complete                                                                                                                                                                                             1.0s
+[0m[37m   ⠋ f49c2d6d086c Download complete                                                                                                                                                                                             1.0s
+[0m[37m   ⠏ 18b045ddb54d Pulling fs layer                                                                                                                                                                                              1.0s
+[0m[37m   ⠏ 14ed0c386119 Download complete                                                                                                                                                                                             1.0s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/7
+[37m ⠧ redis Pulling                                                                                                                                                                                                                3.8s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[37m   ⠙ 495af11a3eac Download complete                                                                                                                                                                                             1.1s
+[0m[37m   ⠙ a2271c958e57 Download complete                                                                                                                                                                                             1.1s
+[0m[37m   ⠙ f49c2d6d086c Download complete                                                                                                                                                                                             1.1s
+[0m[37m   ⠋ 18b045ddb54d Pulling fs layer                                                                                                                                                                                              1.1s
+[0m[37m   ⠋ 14ed0c386119 Download complete                                                                                                                                                                                             1.1s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/7
+[37m ⠇ redis Pulling                                                                                                                                                                                                                3.9s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[37m   ⠹ 495af11a3eac Download complete                                                                                                                                                                                             1.2s
+[0m[37m   ⠹ a2271c958e57 Download complete                                                                                                                                                                                             1.2s
+[0m[37m   ⠹ f49c2d6d086c Download complete                                                                                                                                                                                             1.2s
+[0m[37m   ⠙ 18b045ddb54d Pulling fs layer                                                                                                                                                                                              1.2s
+[0m[37m   ⠙ 14ed0c386119 Download complete                                                                                                                                                                                             1.2s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/7
+[37m ⠏ redis Pulling                                                                                                                                                                                                                4.0s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[37m   ⠸ 495af11a3eac Download complete                                                                                                                                                                                             1.3s
+[0m[37m   ⠸ a2271c958e57 Download complete                                                                                                                                                                                             1.3s
+[0m[37m   ⠸ f49c2d6d086c Download complete                                                                                                                                                                                             1.3s
+[0m[37m   ⠹ 18b045ddb54d Pulling fs layer                                                                                                                                                                                              1.3s
+[0m[37m   ⠹ 14ed0c386119 Download complete                                                                                                                                                                                             1.3s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/7
+[37m ⠋ redis Pulling                                                                                                                                                                                                                4.1s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[37m   ⠼ 495af11a3eac Download complete                                                                                                                                                                                             1.4s
+[0m[37m   ⠼ a2271c958e57 Download complete                                                                                                                                                                                             1.4s
+[0m[37m   ⠼ f49c2d6d086c Download complete                                                                                                                                                                                             1.4s
+[0m[37m   ⠸ 18b045ddb54d Pulling fs layer                                                                                                                                                                                              1.4s
+[0m[37m   ⠸ 14ed0c386119 Download complete                                                                                                                                                                                             1.4s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 1/7
+[37m ⠙ redis Pulling                                                                                                                                                                                                                4.2s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[37m   ⠴ 495af11a3eac Download complete                                                                                                                                                                                             1.5s
+[0m[37m   ⠴ a2271c958e57 Download complete                                                                                                                                                                                             1.5s
+[0m[37m   ⠴ f49c2d6d086c Download complete                                                                                                                                                                                             1.5s
+[0m[37m   ⠼ 18b045ddb54d Download complete                                                                                                                                                                                             1.5s
+[0m[37m   ⠼ 14ed0c386119 Download complete                                                                                                                                                                                             1.5s
+[0m[37m   ⠋ 19c51d4327cf Download complete                                                                                                                                                                                             0.0s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 2/8
+[34m ⠿ redis Pulled                                                                                                                                                                                                                 4.3s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[37m   ⠦ 495af11a3eac Download complete                                                                                                                                                                                             1.6s
+[0m[37m   ⠦ a2271c958e57 Download complete                                                                                                                                                                                             1.6s
+[0m[37m   ⠦ f49c2d6d086c Download complete                                                                                                                                                                                             1.6s
+[0m[37m   ⠴ 18b045ddb54d Download complete                                                                                                                                                                                             1.6s
+[0m[37m   ⠴ 14ed0c386119 Download complete                                                                                                                                                                                             1.6s
+[0m[37m   ⠙ 19c51d4327cf Download complete                                                                                                                                                                                             0.1s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 2/8
+[34m ⠿ redis Pulled                                                                                                                                                                                                                 4.3s
+[0m[34m   ⠿ 8740c948ffd4 Already exists                                                                                                                                                                                                0.0s
+[0m[37m   ⠧ 495af11a3eac Download complete                                                                                                                                                                                             1.6s
+[0m[37m   ⠧ a2271c958e57 Download complete                                                                                                                                                                                             1.6s
+[0m[37m   ⠧ f49c2d6d086c Download complete                                                                                                                                                                                             1.6s
+[0m[37m   ⠦ 18b045ddb54d Download complete                                                                                                                                                                                             1.6s
+[0m[37m   ⠦ 14ed0c386119 Download complete                                                                                                                                                                                             1.6s
+[0m[37m   ⠹ 19c51d4327cf Download complete                                                                                                                                                                                             0.1s
+[0m[?25h[33mWARN[0m[0004] Found orphan containers ([todo-backend-app-1]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up. 
+[1A[1B[0G[?25l[+] Running 1/0
+[37m ⠋ Container todo-backend-redis-1  Creating                                                                                                                                                                                     0.0s
+[0m[34m ⠿ Container todo-backend-mongo-1  Running                                                                                                                                                                                      0.0s
+[0m[?25h[1A[1A[1A[0G[?25l[+] Running 1/2
+[37m ⠿ Container todo-backend-redis-1  Starting                                                                                                                                                                                     0.1s
+[0m[34m ⠿ Container todo-backend-mongo-1  Running                                                                                                                                                                                      0.0s
+[0m[?25h[1A[1A[1A[0G[?25l[34m[+] Running 2/2[0m
+[34m ⠿ Container todo-backend-redis-1  Started                                                                                                                                                                                      0.2s
+[0m[34m ⠿ Container todo-backend-mongo-1  Running                                                                                                                                                                                      0.0s
+[0m[?25h]1;...todo-backend]2;nevena@nevena-xps13: ~/Desktop/fullstackopen/part12/container-applications/todo-app/todo-backend]0;~/Desktop/fullstackopen/part12/container-applications/todo-app/todo-backend
+[0m[27m[24m[J[34m~/Desktop/fullstackopen/part12/container-applications/todo-app/todo-backend[39m [38;5;242mmain[38;5;218m*[39m
+[35m❯[39m [K[?1h=[?2004hREDIS_URL=insert-redis-url-here MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database [32mnpm[39m [33mrun[39m dev[117D[7mR[7mE[7mD[7mI[7mS[7m_[7mU[7mR[7mL[7m=[7mi[7mn[7ms[7me[7mr[7mt[7m-[7mr[7me[7md[7mi[7ms[7m-[7mu[7mr[7ml[7m-[7mh[7me[7mr[7me[7m [7mM[7mO[7mN[7mG[7mO[7m_[7mU[7mR[7mL[7m=[7mm[7mo[7mn[7mg[7mo[7md[7mb[7m:[7m/[7m/[7mt[7mh[7me[7m_[7mu[7ms[7me[7mr[7mn[7ma[7mm[7me[7m:[7mt[7mh[7me[7m_[7mp[7ma[7ms[7ms[7mw[7mo[7mr[7md[7m@[7ml[7mo[7mc[7ma[7ml[7mh[7mo[7ms[7mt[7m:[7m3[7m4[7m5[7m6[7m/[7mt[7mh[7me[7m_[7md[7ma[7mt[7ma[7mb[7ma[7ms[7me[7m [3C[7m [3C[7m [7md[7me[7mv[27m[117D[27mR[27mE[27mD[27mI[27mS[27m_[27mU[27mR[27mL[27m=[27mi[27mn[27ms[27me[27mr[27mt[27m-[27mr[27me[27md[27mi[27ms[27m-[27mu[27mr[27ml[27m-[27mh[27me[27mr[27me[27m [27mM[27mO[27mN[27mG[27mO[27m_[27mU[27mR[27mL[27m=[27mm[27mo[27mn[27mg[27mo[27md[27mb[27m:[27m/[27m/[27mt[27mh[27me[27m_[27mu[27ms[27me[27mr[27mn[27ma[27mm[27me[27m:[27mt[27mh[27me[27m_[27mp[27ma[27ms[27ms[27mw[27mo[27mr[27md[27m@[27ml[27mo[27mc[27ma[27ml[27mh[27mo[27ms[27mt[27m:[27m3[27m4[27m5[27m6[27m/[27mt[27mh[27me[27m_[27md[27ma[27mt[27ma[27mb[27ma[27ms[27me[27m [3C[27m [3C[27m [27md[27me[27mv[1C[1C[1C[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87Dredis://host:port MONGO_URL=mongodb://the_username:the_password@localhost:3[39m4[39m5[39m6/[39mt[39mh[39me_database [32mnpm[39m [33mrun[39m dev[86D[17D[7mr[7me[7md[7mi[7ms[7m:[7m/[7m/[7mh[7mo[7ms[7mt[7m:[7mp[7mo[7mr[7mt[27m[17D[27mr[27me[27md[27mi[27ms[27m:[27m/[27m/[27mh[27mo[27ms[27mt[27m:[27mp[27mo[27mr[27mt[1C[1C[1C[1C[1C[P[86C [87D[P[86C [87D[P[86C [87D[P[86C [87D6 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database[39m [32mn[32mp[32mm[39m[39m [33mr[33mu[33mn[39m dev[86D3 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database[39m [32mn[32mp[32mm[39m[39m [33mr[33mu[33mn[39m dev[86D7 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database[39m [32mn[32mp[32mm[39m[39m [33mr[33mu[33mn[39m dev[86D9 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database[39m [32mn[32mp[32mm[39m[39m [33mr[33mu[33mn[39m dev[86Dlhost:6379 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database[39m [32mn[32mp[32mm[39m[39m [33mr[33mu[33mn[39m dev[95Dohost:6379 MONGO_URL=mongodb://the_username:the_password@localhost:3456
