@@ -17,7 +17,8 @@ router.get("/", async (req, res) => {
 })
 
 router.get("/statistics", async (req, res) => {
-  const count = parseInt((await redis.getAsync("todoCount")) || "0")
+  console.log('first', await redis.getAsync("todoCount"))
+  const count = Number((await redis.getAsync("todoCount")) || "0")
 
   res.send({
     added_todos: count,
