@@ -1,16 +1,5 @@
 services:
-  app:
-    image: todo-frontend-dev
-    build:
-      context: ./todo-frontend/ # The context will pick this directory as the "build context"
-      # dockerfile: dev.Dockerfile # This will simply tell which dockerfile to read
-    volumes:
-      - ./todo-frontend/:/usr/src/app # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
-    environment:
-      - REACT_APP_BACKEND_URL=/api/
-    ports:
-      - 3000:3000
-  mongo:
+  prod-mongo:
     image: mongo
     ports:
       - 3456:27017
@@ -19,33 +8,27 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: example
       MONGO_INITDB_DATABASE: the_database
     volumes:
-      - ./todo-backend/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
-      - ./todo-backend/mongo_data:/data/db
-  redis:
-    image: redis
-    ports:
-      - 6379:6379
-    command: [ "redis-server", "--appendonly", "yes" ]       
-    volumes:
-      # Declare the volume
-      - ./todo-backend/redis_data:/data
-  server:
-    image: todo-backend-dev
-    build:
-      context: ./todo-backend # The context will pick this directory as the "build context"
-    volumes:
-      - ./todo-backend/:/usr/src/app
-    ports:
-      - 4000:3000
-    environment:
-      - REDIS_URL=redis://redis:6379
-      - MONGO_URL=mongodb://the_username:the_password@mongo:27017/the_database
+      - ./backend/mongo_data:/data/db
 
-  nginx:
-    image: nginx:1.20.1
+  prod-backend:
+    image: backend-prod
+    build:
+      context: ./backend # The context will pick this directory as the "build context"
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./backend/:/usr/src/app
+    ports:
+      - 4000:5000
+    environment:
+      - MONGODB_URI=mongodb://root:example@prod-mongo:27017/
+    depends_on:
+      - prod-mongo
+
+  prod-nginx-frontend:
+    image: nginx-frontend-prod
+    build:
+      context: ./frontend/ # The context will pick this directory as the "build context"
+      dockerfile: Dockerfile # This will simply tell which dockerfile to read
     ports:
       - 8080:80
     depends_on:
-      - app # wait for the frontend container to be started
+      - prod-backend
